@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class LuckGame 
+{
+	static int ResultB;
+	static int ResultC;
+	static int ResultD;
+	public static void main(String[] args)
+	{
+		
+		Scanner a=new Scanner(System.in);
+		System.out.println("Luck game \t");
+		System.out.println("Player 1 enter your guess");
+		int b=a.nextInt();
+		for(int i=0;b>11;)
+		{
+			System.out.println("input number again");
+			b=a.nextInt();
+		}
+		System.out.println("Player 2 enter your guess");
+		int c=a.nextInt();
+		for(int i=0;c>11;)
+		{
+			System.out.println("input number again");
+			c=a.nextInt();
+		}
+		System.out.println("Player 3 enter your guess");
+		int d=a.nextInt();
+		for(int i=0;d>11;)
+		{
+			System.out.println("input number again");
+			d=a.nextInt();
+		}
+		
+		java.util.Random z=new java.util.Random();
+		int Answer=z.nextInt(10);
+		if(Answer==b)
+		{
+			ResultB++;
+		}
+		if(Answer==c)
+		{
+			ResultC++;
+		}
+		if(Answer==d)
+		{
+			ResultD++;
+		}
+		System.out.println("the Answer is "+Answer);
+		System.out.printf("the points are:"+ResultB+"\n"+ResultC+"\n"+ResultD);
+	}
+}
